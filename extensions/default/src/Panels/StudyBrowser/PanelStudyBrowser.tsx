@@ -125,12 +125,16 @@ function PanelStudyBrowser({
 
       let qidoStudiesForPatient = qidoForStudyUID;
 
-      // try to fetch the prior studies based on the patientID if the
-      // server can respond.
-      try {
-        qidoStudiesForPatient = await getStudiesForPatientByMRN(qidoForStudyUID);
-      } catch (error) {
-        console.warn(error);
+      // check if panel study browser should only load explicit studies
+      const panelStudyBrowserExplicitStudyUIDs = extensionManager._appConfig.panelStudyBrowserExplicitStudyUIDs ?? false;
+      if (!panelStudyBrowserExplicitStudyUIDs) {
+        // try to fetch the prior studies based on the patientID if the
+        // server can respond.
+        try {
+          qidoStudiesForPatient = await getStudiesForPatientByMRN(qidoForStudyUID);
+        } catch (error) {
+          console.warn(error);
+        }
       }
 
       const mappedStudies = _mapDataSourceStudies(qidoStudiesForPatient);
@@ -422,7 +426,7 @@ function PanelStudyBrowser({
           setActiveTabName(clickedTabName);
         }}
         onClickUntrack={onClickUntrack}
-        onClickThumbnail={() => {}}
+        onClickThumbnail={() => { }}
         onDoubleClickThumbnail={onDoubleClickThumbnailHandler}
         activeDisplaySetInstanceUIDs={activeDisplaySetInstanceUIDs}
         showSettings={actionIcons.find(icon => icon.id === 'settings')?.value}
