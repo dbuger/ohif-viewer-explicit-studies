@@ -19,7 +19,7 @@ module.exports = {
     colors: {
       overlay: 'rgba(0, 0, 0, 0.8)',
       transparent: 'transparent',
-      black: '#000',
+      black: '#fff',
       white: '#fff',
       initial: 'initial',
       inherit: 'inherit',
@@ -29,10 +29,10 @@ module.exports = {
       },
 
       primary: {
-        light: '#5acce6',
-        main: '#0944b3',
-        dark: '#090c29',
-        active: '#348cfd',
+        light: '#447fe9',
+        main: '#447fe9',
+        dark: '#447fe9',
+        active: '#447fe9',
       },
       inputfield: {
         main: '#3a3f99',
@@ -43,8 +43,8 @@ module.exports = {
 
       secondary: {
         light: '#3a3f99',
-        main: '#2b166b',
-        dark: '#041c4a',
+        main: '#447fe9',
+        dark: '#447fe9',
         active: '#1f1f27',
       },
 
@@ -60,9 +60,9 @@ module.exports = {
         active: '#2c3074',
       },
       bkg: {
-        low: '#050615',
-        med: '#090C29',
-        full: '#041C4A',
+        low: '#e1e1e1',
+        med: '#447fe9',
+        full: '#447fe9',
       },
       info: {
         primary: '#FFFFFF',

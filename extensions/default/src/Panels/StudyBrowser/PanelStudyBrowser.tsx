@@ -126,7 +126,8 @@ function PanelStudyBrowser({
       let qidoStudiesForPatient = qidoForStudyUID;
 
       // check if panel study browser should only load explicit studies
-      const panelStudyBrowserExplicitStudyUIDs = extensionManager._appConfig.panelStudyBrowserExplicitStudyUIDs ?? false;
+      const panelStudyBrowserExplicitStudyUIDs =
+        extensionManager._appConfig.panelStudyBrowserExplicitStudyUIDs ?? false;
       if (!panelStudyBrowserExplicitStudyUIDs) {
         // try to fetch the prior studies based on the patientID if the
         // server can respond.
@@ -411,8 +412,8 @@ function PanelStudyBrowser({
         />
         <Separator
           orientation="horizontal"
-          className="bg-black"
-          thickness="2px"
+          className="bg-white"
+          thickness="1px"
         />
       </>
 
@@ -426,7 +427,7 @@ function PanelStudyBrowser({
           setActiveTabName(clickedTabName);
         }}
         onClickUntrack={onClickUntrack}
-        onClickThumbnail={() => { }}
+        onClickThumbnail={() => {}}
         onDoubleClickThumbnail={onDoubleClickThumbnailHandler}
         activeDisplaySetInstanceUIDs={activeDisplaySetInstanceUIDs}
         showSettings={actionIcons.find(icon => icon.id === 'settings')?.value}

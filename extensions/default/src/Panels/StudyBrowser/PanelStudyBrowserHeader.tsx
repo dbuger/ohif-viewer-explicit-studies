@@ -16,8 +16,12 @@ function PanelStudyBrowserHeader({
 }) {
   return (
     <>
-      <div className="bg-muted flex h-[40px] select-none rounded-t p-2">
-        <div className={'flex h-[24px] w-full select-none justify-center self-center text-[14px]'}>
+      <div className="flex h-[40px] select-none rounded-t bg-white p-2">
+        <div
+          className={
+            'flex h-[24px] w-full select-none justify-center self-center bg-white text-[14px]'
+          }
+        >
           <div className="flex w-full items-center gap-[10px]">
             <div className="flex items-center justify-center">
               {/*commented to Hide the studybrowser view options toggle button  */}

@@ -62,7 +62,7 @@ const Thumbnail = ({
     return (
       <div
         className={classnames(
-          'flex h-full w-full flex-col items-center justify-center gap-[2px] p-[4px]',
+          'flex h-full w-full flex-col items-center justify-center gap-[2px] bg-white p-[4px]',
           isActive && 'bg-popover rounded'
         )}
       >
@@ -166,7 +166,7 @@ const Thumbnail = ({
     return (
       <div
         className={classnames(
-          'flex h-full w-full items-center justify-between pr-[8px] pl-[8px] pt-[4px] pb-[4px]',
+          'flex h-full w-full items-center justify-between bg-white pr-[8px] pl-[8px] pt-[4px] pb-[4px]',
           isActive && 'bg-popover rounded'
         )}
       >
